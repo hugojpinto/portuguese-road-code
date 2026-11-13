@@ -9,6 +9,16 @@ Two traffic micro-simulations that put two long-standing arguments about the Por
 
 Each simulator is a self-contained web page with a live animation, sliders for every assumption, and a Monte-Carlo comparison that runs every rule set against identical traffic and reports means with 95% confidence intervals. Each page ends with annexes on the legal context and references.
 
+<p align="center">
+  <img src="docs/media/roundabout.gif" width="420" alt="Two-lane roundabout under the PT 2014 rule: a long queue builds in the left entry lane while the right lane stays empty">
+  <br><sub>PT 2014 rule at 2,400 veh/h. Cars are coloured by destination exit. Watch the west arm: a long left-lane queue next to an empty right lane.</sub>
+</p>
+
+<p align="center">
+  <img src="docs/media/highway.gif" width="840" alt="Highway magnifier at the on-ramp merge: tailgaters flashing headlights, stressed drivers, distracted drivers and a blind-spot lane-change crash">
+  <br><sub>Highway magnifier at the on-ramp merge: flashing tailgaters (light beams), stressed drivers (orange halo), distracted drivers (zz), and a blind-spot lane-change crash.</sub>
+</p>
+
 ---
 
 ## Quick start
@@ -47,9 +57,11 @@ Absolute crash rates are **deliberately inflated** so crashes happen often enoug
 |---|---|
 | Most motorway crashes happen during lane changes | **Not testable by simulation.** The share depends on calibration (about 50% here). US national data put lane-change and merge crashes at about 4–9% of all police-reported crashes, with rear-end crashes the larger category. |
 | Speed lanes reduce lane changes | Only in light traffic (−20% at 2,500 veh/h). Same or more in medium and heavy traffic. |
-| Speed lanes (overtake left only) are safer than keep-right | **No significant difference** at any demand level. |
+| Speed lanes (overtake left only) are safer than keep-right | **No: not safer at any demand level.** At 4,200 veh/h it came out 15–18% *worse* (significant in some runs, within noise in others). |
 | … with passing on the right allowed | −27% lane changes, no significant safety difference. |
 | Flashing and tailgating pressure is the real danger | **Supported, by a different mechanism.** "Free lanes" (only the leftmost lane must be kept clear) had −44% crashes at 4,200 veh/h and −24% at 5,200. The advantage disappears when nobody flashes, and acts mainly through tailgating (rear-end crashes) rather than stress (missed cars). |
+
+![Highway comparison: verdict and charts](docs/media/highway-comparison.png)
 
 ### Roundabout: the claims were largely supported
 
@@ -69,6 +81,16 @@ Absolute crash rates are **deliberately inflated** so crashes happen often enoug
 - An unexpected structural issue in PT 2014: moving out to the outer lane "after passing the exit before yours" happens exactly where the previous arm's entrants merge in. It produces crashes even with error-free drivers.
 - **Turbo** (the PT idea enforced by raised lane dividers) is the cleanest design *inside* the ring. It has no lane changes, no exit crossings and the fewest near misses. But lane-by-exit allocation at entry causes the same left-lane queues, so overall it doesn't beat lane integrity. The turbo variant is a simplified symmetric layout and is probably pessimistic about queues.
 - With every human error switched off, the roundabout still produces about 11 crashes per 1000 vehicles under lane integrity. That baseline comes from imperfections in the give-way model and affects every rule, so treat small differences with caution.
+
+![Roundabout comparison: verdict and charts](docs/media/roundabout-comparison.png)
+
+<details>
+<summary>Full app screenshots</summary>
+
+![Highway simulator](docs/media/highway-app.png)
+![Roundabout simulator](docs/media/roundabout-app.png)
+
+</details>
 
 ---
 
