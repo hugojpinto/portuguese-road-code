@@ -74,8 +74,8 @@ export class RoundaboutView {
       ctx.font = '11px ' + cssVar('--mono');
       // label beside the entry lanes, outside the carriageway
       const phi = (k * Math.PI) / 2;
-      const lx = Math.cos(phi) * 62 - Math.sin(phi) * 16;
-      const ly = Math.sin(phi) * 62 + Math.cos(phi) * 16;
+      const lx = Math.cos(phi) * 58 - Math.sin(phi) * 36;
+      const ly = Math.sin(phi) * 58 + Math.cos(phi) * 36;
       const text = `${sim.armLabel(k)} queue  L ${q[1]} · R ${q[0]}`;
       const tw = ctx.measureText(text).width;
       ctx.fillText(text, Math.min(w - tw - 4, Math.max(4, X(lx) - tw / 2)), Math.min(h - 6, Math.max(14, Y(ly))));

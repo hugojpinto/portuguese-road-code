@@ -1,0 +1,147 @@
+demand=4200 veh/h, lanes=3, compliance=0.8, flashers=0.35, stressGain=0, speedSd=16, reps=12 x 20 min
+
+metric                                      EU keep-right       Speed lanes         Speed lanes + right passFree lanes          
+Crashes, all (per 10k veh·km)               50.7 ±8.7           54.8 ±10            50.2 ±12            33.1 ±6.3           
+Crashes, lane change (per 10k veh·km)       19.9 ±4.0           21.5 ±3.3           21.9 ±3.0           16.4 ±3.2           
+Crashes, rear-end (per 10k veh·km)          27.1 ±6.2           29.9 ±7.5           25.7 ±8.6           13.9 ±3.8           
+  of which right after a cut-in (per 10k veh·km)2.93 ±1.2           2.17 ±1.2           2.28 ±1.0           1.34 ±0.7           
+Crashes, hit a car passing on the right (per 10k veh·km)0.91 ±0.8           1.60 ±1.5           1.93 ±1.1           1.01 ±0.8           
+Crashes, car in the blind spot (per 10k veh·km)12.8 ±2.9           13.5 ±1.8           15.1 ±2.6           11.1 ±2.6           
+Crashes, on-ramp merge (per 10k veh·km)     3.73 ±1.0           3.43 ±1.0           2.62 ±0.9           2.89 ±1.5           
+Share of crashes linked to lane changes (0–1)0.53 ±0.1           0.50 ±0.0           0.56 ±0.1           0.62 ±0.1           
+Share of crashes involving a stressed driver (0–1)0.47 ±0.1           0.49 ±0.0           0.42 ±0.1           0.27 ±0.1           
+Lane changes per veh·km                     0.93 ±0.0           0.98 ±0.0           0.69 ±0.0           0.68 ±0.0           
+  to overtake (per veh·km)                  0.54 ±0.0           0.49 ±0.0           0.37 ±0.0           0.44 ±0.0           
+  to return right / to own lane (per veh·km)0.29 ±0.0           0.25 ±0.0           0.14 ±0.0           0.08 ±0.0           
+  to get away from a tailgater (per veh·km) 0.06 ±0.0           0.20 ±0.0           0.14 ±0.0           0.12 ±0.0           
+Aborted lane changes (near misses) (per 10k veh·km)199 ±18             218 ±21             186 ±17             164 ±14             
+Conflicts (time-to-collision < 1.5 s) (per 10k veh·km)552 ±156            664 ±229            665 ±201            290 ±108            
+Hard braking (> 4 m/s²) (per 10k veh·km)    5402 ±627           6231 ±723           3998 ±593           2569 ±403           
+Time being tailgated/flashed (% of driving) 6.96 ±0.5           7.65 ±0.5           7.61 ±0.5           4.47 ±0.4           
+Mean driver stress (0–1)                    0.112 ±0.0          0.123 ±0.0          0.117 ±0.0          0.067 ±0.0          
+Mean speed (km/h)                           71.6 ±2.4           71.4 ±2.5           73.5 ±2.4           75.2 ±2.5           
+Throughput (veh/h)                          3782 ±59            3749 ±43            3787 ±64            3873 ±47            
+Mean wait to enter (s)                      0.33 ±0.0           0.38 ±0.1           0.28 ±0.0           0.26 ±0.0           
+Missed the off-ramp (%)                     24.1 ±2.4           19.3 ±1.7           23.0 ±1.5           24.4 ±2.5           
+Lane use: right lane (%)                    36.1 ±0.2           32.8 ±0.1           33.4 ±0.2           34.0 ±0.1           
+Lane use: lane 2 (%)                        33.4 ±0.1           34.1 ±0.1           33.9 ±0.2           33.1 ±0.1           
+Lane use: lane 3 (%)                        30.5 ±0.2           33.1 ±0.1           32.7 ±0.2           32.9 ±0.1           
+Crash count (raw)                           37 ±6.2             40 ±7.5             37 ±8.2             25 ±4.6             
+
+Paired differences vs EU keep-right (negative = fewer than EU):
+crashes                                                         4.13 ±7.9           -0.45 ±12           -17.6 ±6.1 *        
+crashes_lc                                                      1.59 ±3.0           2.07 ±4.9           -3.50 ±2.6 *        
+crashes_rear                                                    2.84 ±5.8           -1.41 ±8.4          -13.2 ±6.9 *        
+conflicts                                                       112 ±187            113 ±210            -262 ±122 *         
+lc_per_km                                                       0.05 ±0.0 *         -0.24 ±0.0 *        -0.25 ±0.0 *        
+
+demand=4200 veh/h, lanes=3, compliance=0.8, flashers=0, stressGain=3, speedSd=16, reps=12 x 20 min
+
+metric                                      EU keep-right       Speed lanes         Speed lanes + right passFree lanes          
+Crashes, all (per 10k veh·km)               36.0 ±5.8           38.4 ±4.7           33.6 ±4.6           30.3 ±5.0           
+Crashes, lane change (per 10k veh·km)       17.9 ±2.6           20.3 ±2.7           19.1 ±3.0           14.4 ±2.7           
+Crashes, rear-end (per 10k veh·km)          13.8 ±4.1           14.8 ±3.2           12.2 ±2.1           13.4 ±3.4           
+  of which right after a cut-in (per 10k veh·km)2.01 ±1.0           2.15 ±1.1           1.47 ±0.9           1.33 ±0.9           
+Crashes, hit a car passing on the right (per 10k veh·km)0.79 ±0.6           0.90 ±0.7           1.00 ±0.4           0.78 ±0.8           
+Crashes, car in the blind spot (per 10k veh·km)13.4 ±2.5           14.1 ±1.9           13.0 ±2.6           10.2 ±2.5           
+Crashes, on-ramp merge (per 10k veh·km)     4.38 ±1.6           3.38 ±1.5           2.36 ±1.2           2.55 ±1.0           
+Share of crashes linked to lane changes (0–1)0.69 ±0.1           0.67 ±0.1           0.69 ±0.0           0.61 ±0.1           
+Share of crashes involving a stressed driver (0–1)0.17 ±0.0           0.14 ±0.0           0.20 ±0.0           0.16 ±0.1           
+Lane changes per veh·km                     0.79 ±0.0           0.81 ±0.0           0.56 ±0.0           0.63 ±0.0           
+  to overtake (per veh·km)                  0.47 ±0.0           0.42 ±0.0           0.31 ±0.0           0.41 ±0.0           
+  to return right / to own lane (per veh·km)0.27 ±0.0           0.22 ±0.0           0.12 ±0.0           0.08 ±0.0           
+  to get away from a tailgater (per veh·km) 0.01 ±0.0           0.13 ±0.0           0.08 ±0.0           0.10 ±0.0           
+Aborted lane changes (near misses) (per 10k veh·km)180 ±14             192 ±12             163 ±19             167 ±19             
+Conflicts (time-to-collision < 1.5 s) (per 10k veh·km)215 ±55             201 ±51             195 ±46             191 ±53             
+Hard braking (> 4 m/s²) (per 10k veh·km)    3429 ±316           3809 ±268           2067 ±237           2069 ±259           
+Time being tailgated/flashed (% of driving) 1.38 ±0.1           1.37 ±0.1           1.49 ±0.1           1.38 ±0.1           
+Mean driver stress (0–1)                    0.021 ±0.0          0.021 ±0.0          0.022 ±0.0          0.021 ±0.0          
+Mean speed (km/h)                           71.3 ±2.3           72.2 ±2.2           74.0 ±3.1           74.5 ±2.4           
+Throughput (veh/h)                          3841 ±48            3814 ±52            3849 ±57            3857 ±50            
+Mean wait to enter (s)                      0.34 ±0.0           0.38 ±0.1           0.29 ±0.0           0.27 ±0.0           
+Missed the off-ramp (%)                     29.6 ±1.6           25.5 ±2.1           25.9 ±2.6           24.2 ±2.0           
+Lane use: right lane (%)                    36.5 ±0.2           33.2 ±0.1           33.8 ±0.1           34.3 ±0.2           
+Lane use: lane 2 (%)                        33.4 ±0.1           34.1 ±0.2           33.9 ±0.1           33.2 ±0.1           
+Lane use: lane 3 (%)                        30.2 ±0.1           32.7 ±0.2           32.3 ±0.1           32.5 ±0.1           
+Crash count (raw)                           27 ±4.3             28 ±3.5             25 ±3.2             23 ±3.6             
+
+Paired differences vs EU keep-right (negative = fewer than EU):
+crashes                                                         2.38 ±7.6           -2.40 ±6.5          -5.74 ±6.2          
+crashes_lc                                                      2.38 ±4.3           1.15 ±3.5           -3.55 ±4.3          
+crashes_rear                                                    1.01 ±4.1           -1.53 ±4.4          -0.36 ±4.9          
+conflicts                                                       -14.0 ±77           -20.2 ±56           -24.0 ±45           
+lc_per_km                                                       0.03 ±0.0 *         -0.23 ±0.0 *        -0.16 ±0.0 *        
+
+demand=4200 veh/h, lanes=3, compliance=0.95, flashers=0.35, stressGain=3, speedSd=16, reps=12 x 20 min
+
+metric                                      EU keep-right       Speed lanes         Speed lanes + right passFree lanes          
+Crashes, all (per 10k veh·km)               82.6 ±13            89.5 ±14            72.4 ±11            48.2 ±12            
+Crashes, lane change (per 10k veh·km)       32.8 ±4.2           38.6 ±5.5           33.5 ±5.2           21.9 ±5.0           
+Crashes, rear-end (per 10k veh·km)          46.9 ±8.7           48.4 ±9.7           37.0 ±8.4           24.3 ±6.2           
+  of which right after a cut-in (per 10k veh·km)4.97 ±1.2           5.76 ±1.8           3.70 ±1.6           3.38 ±1.1           
+Crashes, hit a car passing on the right (per 10k veh·km)2.20 ±0.8           3.06 ±1.1           3.22 ±1.5           1.47 ±1.1           
+Crashes, car in the blind spot (per 10k veh·km)22.3 ±4.0           23.9 ±3.9           23.4 ±3.7           14.9 ±3.8           
+Crashes, on-ramp merge (per 10k veh·km)     2.90 ±1.2           2.47 ±1.3           1.95 ±1.1           2.03 ±1.6           
+Share of crashes linked to lane changes (0–1)0.50 ±0.0           0.53 ±0.1           0.55 ±0.1           0.58 ±0.0           
+Share of crashes involving a stressed driver (0–1)0.60 ±0.1           0.65 ±0.0           0.65 ±0.0           0.43 ±0.1           
+Lane changes per veh·km                     1.01 ±0.0           1.06 ±0.0           0.73 ±0.0           0.72 ±0.0           
+  to overtake (per veh·km)                  0.56 ±0.0           0.49 ±0.0           0.36 ±0.0           0.45 ±0.0           
+  to return right / to own lane (per veh·km)0.35 ±0.0           0.29 ±0.0           0.16 ±0.0           0.08 ±0.0           
+  to get away from a tailgater (per veh·km) 0.06 ±0.0           0.23 ±0.0           0.15 ±0.0           0.14 ±0.0           
+Aborted lane changes (near misses) (per 10k veh·km)271 ±21             299 ±29             237 ±28             187 ±21             
+Conflicts (time-to-collision < 1.5 s) (per 10k veh·km)666 ±139            758 ±183            627 ±155            331 ±107            
+Hard braking (> 4 m/s²) (per 10k veh·km)    5899 ±403           6954 ±609           4259 ±596           2820 ±389           
+Time being tailgated/flashed (% of driving) 6.47 ±0.4           7.01 ±0.4           6.79 ±0.5           4.26 ±0.3           
+Mean driver stress (0–1)                    0.108 ±0.0          0.118 ±0.0          0.109 ±0.0          0.065 ±0.0          
+Mean speed (km/h)                           70.9 ±1.7           70.1 ±2.1           74.0 ±2.1           74.6 ±2.9           
+Throughput (veh/h)                          3666 ±63            3617 ±41            3714 ±32            3816 ±58            
+Mean wait to enter (s)                      0.37 ±0.1           0.44 ±0.1           0.29 ±0.0           0.28 ±0.0           
+Missed the off-ramp (%)                     24.4 ±2.7           18.3 ±2.5           23.2 ±1.6           21.9 ±2.1           
+Lane use: right lane (%)                    36.9 ±0.2           33.2 ±0.1           33.7 ±0.1           34.1 ±0.2           
+Lane use: lane 2 (%)                        33.7 ±0.1           34.2 ±0.1           34.0 ±0.1           33.2 ±0.1           
+Lane use: lane 3 (%)                        29.4 ±0.2           32.6 ±0.1           32.3 ±0.1           32.7 ±0.1           
+Crash count (raw)                           59 ±8.6             63 ±9.5             52 ±7.8             36 ±8.4             
+
+Paired differences vs EU keep-right (negative = fewer than EU):
+crashes                                                         6.93 ±9.3           -10.2 ±11           -34.4 ±10 *         
+crashes_lc                                                      5.79 ±3.7 *         0.62 ±5.0           -10.9 ±5.2 *        
+crashes_rear                                                    1.57 ±7.8           -9.88 ±8.7 *        -22.6 ±6.7 *        
+conflicts                                                       92.7 ±132           -38.8 ±173          -334 ±133 *         
+lc_per_km                                                       0.05 ±0.0 *         -0.29 ±0.0 *        -0.30 ±0.0 *        
+
+demand=4200 veh/h, lanes=3, compliance=0.6, flashers=0.35, stressGain=3, speedSd=16, reps=12 x 20 min
+
+metric                                      EU keep-right       Speed lanes         Speed lanes + right passFree lanes          
+Crashes, all (per 10k veh·km)               72.8 ±13            73.9 ±10            63.6 ±14            48.9 ±11            
+Crashes, lane change (per 10k veh·km)       31.9 ±6.0           31.7 ±5.9           28.2 ±5.4           23.8 ±4.5           
+Crashes, rear-end (per 10k veh·km)          38.3 ±8.0           39.0 ±6.1           33.7 ±9.4           23.4 ±7.2           
+  of which right after a cut-in (per 10k veh·km)3.79 ±1.4           3.45 ±0.9           2.74 ±1.3           2.02 ±1.0           
+Crashes, hit a car passing on the right (per 10k veh·km)2.53 ±1.2           3.35 ±1.7           2.98 ±1.8           1.93 ±0.9           
+Crashes, car in the blind spot (per 10k veh·km)21.0 ±4.4           20.0 ±3.4           20.1 ±3.8           16.8 ±3.9           
+Crashes, on-ramp merge (per 10k veh·km)     2.63 ±1.5           3.22 ±1.2           1.72 ±1.3           1.70 ±1.2           
+Share of crashes linked to lane changes (0–1)0.53 ±0.0           0.52 ±0.0           0.53 ±0.1           0.58 ±0.1           
+Share of crashes involving a stressed driver (0–1)0.60 ±0.1           0.62 ±0.1           0.63 ±0.1           0.45 ±0.0           
+Lane changes per veh·km                     0.91 ±0.0           0.95 ±0.0           0.69 ±0.0           0.71 ±0.0           
+  to overtake (per veh·km)                  0.56 ±0.0           0.53 ±0.0           0.41 ±0.0           0.47 ±0.0           
+  to return right / to own lane (per veh·km)0.24 ±0.0           0.21 ±0.0           0.12 ±0.0           0.09 ±0.0           
+  to get away from a tailgater (per veh·km) 0.06 ±0.0           0.17 ±0.0           0.12 ±0.0           0.10 ±0.0           
+Aborted lane changes (near misses) (per 10k veh·km)259 ±32             269 ±22             234 ±25             198 ±25             
+Conflicts (time-to-collision < 1.5 s) (per 10k veh·km)609 ±176            609 ±142            552 ±194            391 ±145            
+Hard braking (> 4 m/s²) (per 10k veh·km)    5708 ±682           6081 ±478           4115 ±695           3039 ±540           
+Time being tailgated/flashed (% of driving) 6.90 ±0.4           7.19 ±0.4           6.95 ±0.6           4.48 ±0.4           
+Mean driver stress (0–1)                    0.113 ±0.0          0.119 ±0.0          0.110 ±0.0          0.068 ±0.0          
+Mean speed (km/h)                           72.0 ±2.5           72.1 ±1.6           74.7 ±2.8           74.7 ±2.6           
+Throughput (veh/h)                          3706 ±40            3706 ±53            3764 ±56            3815 ±55            
+Mean wait to enter (s)                      0.33 ±0.0           0.35 ±0.0           0.28 ±0.0           0.27 ±0.0           
+Missed the off-ramp (%)                     23.8 ±1.6           20.5 ±2.3           21.5 ±2.2           22.0 ±2.3           
+Lane use: right lane (%)                    35.1 ±0.1           32.4 ±0.2           33.1 ±0.1           33.8 ±0.1           
+Lane use: lane 2 (%)                        33.1 ±0.1           33.8 ±0.1           33.5 ±0.1           33.0 ±0.1           
+Lane use: lane 3 (%)                        31.8 ±0.1           33.8 ±0.1           33.4 ±0.1           33.2 ±0.1           
+Crash count (raw)                           53 ±9.3             53 ±7.4             46 ±10              36 ±7.9             
+
+Paired differences vs EU keep-right (negative = fewer than EU):
+crashes                                                         1.05 ±14            -9.16 ±13           -23.9 ±12 *         
+crashes_lc                                                      -0.18 ±7.2          -3.68 ±7.0          -8.02 ±6.2 *        
+crashes_rear                                                    0.63 ±8.9           -4.58 ±7.4          -14.9 ±7.9 *        
+conflicts                                                       -0.18 ±214          -57.6 ±194          -219 ±141 *         
+lc_per_km                                                       0.05 ±0.0 *         -0.21 ±0.0 *        -0.19 ±0.0 *        

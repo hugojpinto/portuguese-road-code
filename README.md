@@ -31,7 +31,7 @@ npm run batch:roundabout -- --reps 12 --minutes 30 [--main 600 --side 400] [--pe
 
 **Fair comparison.** Every rule set is run against identical random traffic: same arrivals, same drivers, same error rates (common random numbers). Results are reported as means with 95% confidence intervals. Differences are tested with paired tests.
 
-**Validation.** With every human error switched off, the highway and the lane-integrity roundabout produce (almost) no crashes. Error rates were calibrated so that, under the current EU rule in medium-heavy traffic, rear-end crashes are about 40–50% of multi-vehicle crashes. That is roughly real-world, and it stops the highway model "proving" claim 1 by construction.
+**Validation.** With every human error switched off, the highway produces no crashes. The roundabout still produces some (about 11 per 1000 vehicles under lane integrity), from imperfections in the give-way model that affect all rules. See `results/roundabout_sensitivity.txt`. Error rates were calibrated so that, under the current EU rule in medium-heavy traffic, rear-end crashes are about 40–50% of multi-vehicle crashes. That is roughly real-world, and it stops the highway model "proving" claim 1 by construction.
 
 **Absolute crash rates are inflated by orders of magnitude** so crashes happen often enough to measure. Only ratios between rule sets mean anything.
 
