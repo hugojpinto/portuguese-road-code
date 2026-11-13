@@ -11,7 +11,7 @@
     <header class="top">
       <h1>Keep right vs speed lanes</h1>
       <span class="claim">Does "always keep right" (with forced returns to the right lane and flashing at middle-lane drivers) cause more lane changes, stress and crashes than lanes with increasing speed from right to left?</span>
-      <nav><a href="../index.html" id="home-link">all simulators</a><button id="theme" title="Toggle theme">◐</button></nav>
+      <nav><a href="#annex-a">legal context</a><a href="#annex-b">references</a><a href="../index.html" id="home-link">all simulators</a><button id="theme" title="Toggle theme">◐</button></nav>
     </header>
     <div class="layout">
       <aside class="panel" id="controls"></aside>
@@ -37,8 +37,48 @@
             <li><b>Lane changes</b>: MOBIL model (incentive plus a safety check). Each rule set only changes the lane-choice incentives, whether passing on the right is allowed, and when tailgating and flashing are "licensed". Drivers, traffic and human-error rates are identical across rules: each replicate uses the same random traffic for every rule (common random numbers).</li>
             <li><b>Absolute crash rates are deliberately inflated</b>, by orders of magnitude, so crashes are frequent enough to compare. Only the <i>ratios</i> between rule sets mean anything. The error rates are calibrated so that, under the EU rule at medium-heavy traffic, rear-end crashes are roughly 40–50% of multi-vehicle crashes. That is close to real motorway data. If you push the error sliders, you can make either crash type dominate.</li>
             <li><b>Not modelled</b>: single-vehicle crashes (run-off-road, about 30% of real motorway crashes), weather, night-time, motorbikes, secondary crashes (crashed cars are removed instantly), and the slow cultural adaptation of drivers to a new rule.</li>
-            <li><b>Real-world reference</b>: lane-change and sideswipe crashes are typically 10–25% of motorway crashes, and rear-end the largest category. The simulator is better at answering "which rule exposes drivers to more risky manoeuvres and stress" than "what share of crashes are lane changes".</li>
+            <li><b>Real-world reference</b>: in US national data, lane-change and merge crashes were about 4% (1991) to about 9% (1999) of all police-reported crashes, with rear-end crashes the larger category (see Annex B, [6]–[7]). The simulator is better at answering "which rule exposes drivers to more risky manoeuvres and stress" than "what share of crashes are lane changes".</li>
           </ul>
+        </section>
+        <section class="annex" id="annex-a">
+          <h2>Annex A: Legal context</h2>
+          <p class="sub">What the rules being compared actually say.</p>
+          <table class="law">
+            <thead><tr><th>Jurisdiction</th><th>Rule</th><th>Modelled as</th></tr></thead>
+            <tbody>
+              <tr><td>Portugal, Código da Estrada art. 13.º</td><td>"Posição de marcha": vehicles keep to the right-hand side of the carriageway. <a href="#ref-h9">[9]</a></td><td>EU keep right</td></tr>
+              <tr><td>Portugal, art. 14.º (multiple lanes)</td><td>On roads with several lanes per direction, the left lane (two lanes), or the left and middle lanes (three lanes), are for overtaking. Breaching n.º 2 carries a €60–300 fine. Passing on the right is not allowed except in cases the Code provides for, such as slow-moving queues. <a href="#ref-h9">[9]</a> <a href="#ref-h10">[10]</a></td><td>EU keep right (passing on the right banned above 60 km/h)</td></tr>
+              <tr><td>United States, most states</td><td>"Keep right except to pass" is common, but passing on the right is generally lawful on multi-lane highways. Enforcement of left-lane camping varies.</td><td>Free lanes</td></tr>
+              <tr><td>Proposal under test</td><td>Lanes with increasing steady speed from right to left. Overtake on the left (optionally also on the right). Don't block the leftmost lane.</td><td>Speed lanes, and Speed lanes + right pass</td></tr>
+            </tbody>
+          </table>
+          <p class="warn">The article texts above come from secondary sources (press and municipal copies). Check the consolidated Código da Estrada on Diário da República before quoting them formally.</p>
+        </section>
+
+        <section class="annex" id="annex-b">
+          <h2>Annex B: Literature and references</h2>
+          <p class="sub">The behavioural models used, and the empirical data the crash mix was calibrated against.</p>
+          <h3>Traffic models</h3>
+          <ol class="refs">
+            <li id="ref-h1">Treiber, M., Hennecke, A., &amp; Helbing, D. (2000). Congested traffic states in empirical observations and microscopic simulations. <i>Physical Review E</i>, 62(2), 1805–1824. <a href="https://doi.org/10.1103/PhysRevE.62.1805">doi:10.1103/PhysRevE.62.1805</a><span class="note">The Intelligent Driver Model (IDM) used for car following. Collision-free when drivers are attentive.</span></li>
+            <li id="ref-h2">Treiber, M., Kesting, A., &amp; Helbing, D. (2006). Delays, inaccuracies and anticipation in microscopic traffic models. <i>Physica A</i>, 360(1), 71–88. <a href="https://doi.org/10.1016/j.physa.2005.05.001">doi:10.1016/j.physa.2005.05.001</a><span class="note">The Human Driver Model: reaction delay plus anticipation. The basis for the 0.3–0.6 s delay with gap extrapolation used here.</span></li>
+            <li id="ref-h3">Kesting, A., Treiber, M., &amp; Helbing, D. (2007). General lane-changing model MOBIL for car-following models. <i>Transportation Research Record</i>, 1999, 86–94. <a href="https://doi.org/10.3141/1999-10">doi:10.3141/1999-10</a><span class="note">The lane-change model (incentive plus safety criterion). Its "European" variant, where a car may not pass a slower car on its left, is how the no-passing-on-the-right rule is implemented.</span></li>
+            <li id="ref-h4">Lopez, P. A., et al. (2018). Microscopic Traffic Simulation using SUMO. <i>IEEE ITSC 2018</i>, 2575–2582. <a href="https://doi.org/10.1109/ITSC.2018.8569938">doi:10.1109/ITSC.2018.8569938</a><span class="note">The reference open-source micro-simulator. Its conflict-zone approach inspired the roundabout give-way logic.</span></li>
+          </ol>
+          <h3>Lane-change crashes</h3>
+          <ol class="refs" start="5">
+            <li id="ref-h5">Fitch, G. M., Lee, S. E., Klauer, S., Hankey, J., Sudweeks, J., &amp; Dingus, T. (2009). <i>Analysis of Lane-Change Crashes and Near-Crashes</i> (DOT HS 811 147). NHTSA. <a href="https://www.nhtsa.gov/sites/nhtsa.gov/files/811147.pdf">nhtsa.gov/…/811147.pdf</a><span class="note">Naturalistic-driving analysis of lane-change crashes and near-crashes.</span></li>
+            <li id="ref-h6">NHTSA (1994). Analysis of lane change crashes (DOT HS 808 075). <span class="note">Lane-change and merge crashes were about 4% of all US police-reported crashes in 1991.</span></li>
+            <li id="ref-h7">NHTSA estimate for 1999 data, as cited in secondary sources: about 539,000 two-vehicle lane-change crashes, about 9% of police-reported crashes. <a href="https://www.arnolditkin.com/trucking-safety/driver-error/driver-behavior/unsafe-lane-changes/">source</a><span class="note">Secondary citation. These are all-road figures; no motorway-only share was found. Rear-end crashes are the larger category in both cases.</span></li>
+            <li id="ref-h8">SWOV. Analysis of lane change crashes. <a href="https://swov.nl/en/publicatie/analysis-lane-change-crashes">swov.nl</a> · Effects of blind spot monitoring systems on police-reported lane-change crashes. <i>Traffic Injury Prevention</i> (2018). <a href="https://pubmed.ncbi.nlm.nih.gov/29927678/">PubMed 29927678</a><span class="note">Evidence that blind-spot detection failures are a material share of lane-change crashes. Supports the elevated blind-spot miss probability.</span></li>
+          </ol>
+          <h3>Portuguese rules (press and secondary sources)</h3>
+          <ol class="refs" start="9">
+            <li id="ref-h9">Lei n.º 72/2013 (revision of the Código da Estrada). <a href="https://diariodarepublica.pt/dr/detalhe/lei/72-2013-499526">Diário da República</a> · municipal copy: <a href="https://www.cm-evora.pt/wp-content/uploads/2020/06/Lei72_2013_CodEstrada.pdf">cm-evora.pt</a></li>
+            <li id="ref-h10">Pplware, "Circular na via do meio pode custar 300 euros e pontos na carta". <a href="https://pplware.sapo.pt/motores/circular-na-faixa-do-meio-pode-custar-300-euros-e-pontos-na-carta/">pplware.sapo.pt</a> · 4gnews, "Conduzir na via do meio ou esquerda dá multa?". <a href="https://4gnews.pt/conduzir-na-via-do-meio-ou-esquerda-da-multa-codigo-da-estrada-e-claro/">4gnews.pt</a></li>
+          </ol>
+          <h3>How the calibration uses this</h3>
+          <p>Human-error rates are not taken from any single study. They were tuned so that (a) drivers with every error switched off never crash, and (b) under the EU rule in medium-heavy traffic, rear-end crashes come out at roughly 40–50% of the multi-vehicle crashes. That keeps lane-change crashes from dominating by construction. Absolute rates are inflated on purpose; compare only between rule sets.</p>
         </section>
       </main>
       <aside class="right panel">
