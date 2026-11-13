@@ -3,7 +3,7 @@
 Two traffic micro-simulations that test arguments about Portuguese and EU road rules:
 
 1. **Highway, "keep right" vs "speed lanes"**: the EU/PT keep-right rule (return right after every overtake, no passing on the right, flashing at middle-lane drivers) versus lanes with increasing speed from right to left. Variants allow passing on the right, or use US-style free lanes.
-2. **Roundabout, PT 2014 lane rule vs lane integrity**: on a two-lane roundabout, "choose your lane by your exit, and the outer lane must exit" (as practised, and with perfect compliance) versus "stay in your lane, and the inner lane exits into exit lane 2 giving way".
+2. **Roundabout, PT 2014 lane rule vs lane integrity vs turbo**: on a two-lane roundabout, "choose your lane by your exit, and the outer lane must exit" (PT Lei 72/2013 art. 14.º-A, as practised and with perfect compliance, the latter being essentially Spain's DGT rule) versus "stay in your lane, and the inner lane exits into exit lane 2 giving way" (UK Highway Code rule 186) versus a Dutch-style turbo roundabout, where raised dividers enforce the PT idea physically.
 
 Each simulator builds and runs on its own. They share a small core (`src/shared`).
 
@@ -51,7 +51,7 @@ npm run batch:roundabout -- --reps 12 --minutes 30 [--main 600 --side 400] [--pe
 Four arms, two circulating lanes (radius 26 m and 30 m), two-lane entries and exits, counter-clockwise. Lane occupancy is decided by geometry: a car whose body is in the outer lane *is* in the outer lane for every other driver. Collisions are oriented-rectangle overlaps. Entries and inner-lane exits use a conflict-zone gap test (in the style of SUMO), re-checked until the point of no return. PT 2014 "as practised" includes old-habit drivers, inner-lane cut-across exits, right-lane queue jumpers, and inner-lane drivers who assume a non-signalling outer car will exit because the rule says it must.
 
 ### Not modelled
-Single-vehicle crashes, weather, night, motorbikes, pedestrians, cyclists, turbo or spiral roundabout markings, secondary crashes (crashed cars are removed), and long-term driver adaptation to a new rule.
+Single-vehicle crashes, weather, night, motorbikes, pedestrians, cyclists, the PT exemption for heavy vehicles and cyclists, asymmetric real-world turbo layouts, secondary crashes (crashed cars are removed), and long-term driver adaptation to a new rule.
 
 ## Layout
 ```

@@ -27,7 +27,7 @@ import {
 } from '../shared/driver';
 import { ARMS, BAND, RING_R, R_IN, R_OUT, armAngle, buildGeometry, mod2pi, obbOverlap, pathPose, type Geometry, type Path } from './geometry';
 
-export type RoundaboutRule = 'pt2014' | 'pt2014_ideal' | 'lane_integrity';
+export type RoundaboutRule = 'pt2014' | 'pt2014_ideal' | 'lane_integrity' | 'turbo';
 
 export interface RoundaboutParams {
   rule: RoundaboutRule;
@@ -234,7 +234,7 @@ export class RoundaboutSim {
       p.cutAcrossShare = 0;
       p.queueJumpShare = 0;
     }
-    if (p.rule === 'lane_integrity') {
+    if (p.rule === 'lane_integrity' || p.rule === 'turbo') {
       p.compliance = 1;
       p.cutAcrossShare = 0;
       p.queueJumpShare = 0;
@@ -265,7 +265,7 @@ export class RoundaboutSim {
   }
 
   get isPT(): boolean {
-    return this.p.rule !== 'lane_integrity';
+    return this.p.rule === 'pt2014' || this.p.rule === 'pt2014_ideal';
   }
 
   // ---------------------------------------------------------------- spawning
@@ -322,6 +322,8 @@ export class RoundaboutSim {
     if (tr.exitNo === 1) return 0;
     const habit = () => (tr.exitNo === 2 ? (qR <= qL ? 0 : 1) : 1);
     if (this.p.rule === 'lane_integrity') return habit();
+    // turbo: the raised dividers fix your route. The right lane leads only to the 1st exit.
+    if (this.p.rule === 'turbo') return 1;
     // PT 2014: exit 2+ must use the left lane…
     if (!tr.compliant) return habit();
     if (tr.jumper && qL - qR >= 3) return 0; // …unless you are a queue jumper
@@ -499,6 +501,7 @@ export class RoundaboutSim {
     if (prev && this.t - prev[0] < 3) return prev[1];
     let p: number;
     if (o.signaling) p = 0.9;
+    else if (this.p.rule === 'turbo' && o.ringLane === 0) p = 1; // the outer lane physically ends at the next exit
     else if (this.isPT && o.ringLane === 0 && o.lcLeft <= 0) p = this.p.ruleTrust; // "the outer lane must exit"
     else p = 0.03;
     const b = this.beh.chance(p);

@@ -28,6 +28,10 @@ export function roundaboutVerdict(res: Res): HTMLElement {
     `<b>The grey-area crash</b> (inner-lane car leaving across an outer-lane car that didn't exit, with both breaking the PT rule): ${fmt(s.crashes_grey[PT].mean, 2)} per 1000 vehicles under PT 2014 as practised. Under lane integrity the same geometric conflict exists, but it isn't grey: the car leaving the inner lane must give way. Rate: ${fmt(s.crashes_cut[LI].mean, 2)} per 1000.`,
     `<b>All crashes:</b> lane integrity vs PT 2014 as practised: ${phrase(cmp(res, 'crashes', LI, PT))}. vs PT 2014 with perfect compliance: ${phrase(cmp(res, 'crashes', LI, 'pt2014_ideal'))}. Near misses: ${phrase(cmp(res, 'conflicts', LI, PT))}.`,
   ];
+  if (s.crashes.turbo)
+    items.push(
+      `<b>Turbo roundabout</b> (the PT idea enforced by dividers): crashes vs PT 2014 as practised: ${phrase(cmp(res, 'crashes', 'turbo', PT))}. vs lane integrity: ${phrase(cmp(res, 'crashes', 'turbo', LI))}. Mean delay: ${fmt(s.delay.turbo.mean, 0)} s. Left queue ≥4 with the right lane empty: ${fmt(s.unused_right.turbo.mean, 0)}% of the time.`,
+    );
   if (total < 150) items.push(`<span style="color:var(--bad)">Only ${total} crashes in total, so increase replicates or minutes for firmer conclusions.</span>`);
   return el('div', { class: 'verdict', html: `<h3>What this run says</h3><ul>${items.map((i) => `<li>${i}</li>`).join('')}</ul>` });
 }

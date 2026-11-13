@@ -20,11 +20,19 @@ export const ROUNDABOUT_RULES: RuleDef<RoundaboutRule>[] = [
   },
   {
     id: 'lane_integrity',
-    label: 'Lane integrity (old practice)',
+    label: 'Lane integrity (UK Highway Code style)',
     short: 'Lane integrity',
     color: '#f2a93b',
     description:
-      'Your preference. Right lane for the 1st and (if its queue is shorter) the 2nd exit, left lane for the 2nd, 3rd and 4th. Stay in your lane all the way round. The outer lane can carry on past exits. Inner-lane cars leave directly into the 2nd exit lane, giving way to outer-lane cars that are carrying on.',
+      'Your preference, and essentially UK Highway Code rule 186. Right lane for the 1st and (if its queue is shorter) the 2nd exit, left lane for the 2nd, 3rd and 4th. Stay in your lane all the way round. The outer lane can carry on past exits. Inner-lane cars leave directly into the 2nd exit lane, giving way to outer-lane cars that are carrying on.',
+  },
+  {
+    id: 'turbo',
+    label: 'Turbo / spiral roundabout (Dutch style)',
+    short: 'Turbo',
+    color: '#c46cf0',
+    description:
+      'The PT 2014 idea enforced by geometry instead of by law. Raised lane dividers fix your route at entry: the right lane goes only to the 1st exit, the left lane to every other exit. The outer lane ends at each exit, so every car in it must leave there. Inner-lane cars leave directly into the 2nd exit lane, which is safe because no outer-lane car can carry on past them. No lane changes inside the ring are possible.',
   },
 ];
 

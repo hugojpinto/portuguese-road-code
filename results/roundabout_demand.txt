@@ -1,71 +1,71 @@
 main=600 side=400 veh/h/arm, trust=0.6 cut=0.25 jump=0.2 compliance=0.75, reps=12 x 30 min
 
-metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      
-Crashes, all (per 1000 vehicles)                          62.7 ±7.0           62.2 ±5.0           24.3 ±2.8 ▼         
-Crashes, entering car vs circulating car (per 1000 veh)   35.2 ±4.5           16.6 ±2.0 ▼         9.47 ±1.4 ▼         
-Crashes, lane change inside the ring (per 1000 veh)       3.20 ±1.1           3.62 ±1.4           0.00 ±0.0 ▼         
-Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 0.83 ±0.6           0.00 ±0.0 ▼         1.42 ±0.7           
-  of which the "grey area" (both breaking the PT rule) (p 0.83 ±0.6           0.00 ±0.0 ▼         0.00 ±0.0 ▼         
-Crashes, rear-end (per 1000 veh)                          21.6 ±3.1           40.5 ±4.1 ▲         11.9 ±1.8 ▼         
-Crashes where a car keeping its lane was hit from the sid 31.6 ±3.4           9.84 ±1.3 ▼         10.6 ±1.8 ▼         
-Near misses (< 0.6 m) (per 100 veh)                       9.73 ±0.9           6.62 ±0.7 ▼         5.76 ±0.8 ▼         
-Hard braking (> 4 m/s²) (per 100 veh)                     222 ±18             314 ±14 ▲           150 ±12 ▼           
-Lane changes inside the ring (per 100 veh)                28.4 ±2.0           62.7 ±1.7 ▲         0.00 ±0.0 ▼         
-Exits straight from the inner lane (per 100 veh)          16.9 ±1.4           1.19 ±0.2 ▼         28.2 ±1.5 ▲         
-Extra laps (missed the exit) (per 100 veh)                3.91 ±0.7           2.31 ±0.2 ▼         1.58 ±0.2 ▼         
-Mean delay per vehicle (s)                                55.3 ±10            137 ±17 ▲           36.0 ±3.7 ▼         
-Throughput (veh/h)                                        1536 ±246           1497 ±28            1776 ±109           
-Wait before even reaching the approach (s/veh)            9.47 ±6.3           69.2 ±18 ▲          0.83 ±0.9 ▼         
-Mean queue, left entry lane (veh)                         5.88 ±1.2           8.11 ±0.5 ▲         3.21 ±0.8 ▼         
-Mean queue, right entry lane (veh)                        0.33 ±0.5           0.02 ±0.0           0.83 ±0.6           
-Time with a left queue ≥4 and an empty right lane (% of t 51.4 ±4.0           76.1 ±4.6 ▲         20.8 ±3.3 ▼         
-Entering via the right lane (%)                           43.9 ±1.2           25.0 ±1.0 ▼         67.0 ±0.9 ▲         
-Crash count (raw)                                         60 ±12              57 ±5.4             24 ±3.1 ▼           
+metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      Turbo               
+Crashes, all (per 1000 vehicles)                          62.7 ±7.0           62.2 ±5.0           24.3 ±2.8 ▼         55.7 ±4.0           
+Crashes, entering car vs circulating car (per 1000 veh)   35.2 ±4.5           16.6 ±2.0 ▼         9.47 ±1.4 ▼         10.2 ±2.2 ▼         
+Crashes, lane change inside the ring (per 1000 veh)       3.20 ±1.1           3.62 ±1.4           0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 0.83 ±0.6           0.00 ±0.0 ▼         1.42 ±0.7           0.00 ±0.0 ▼         
+  of which the "grey area" (both breaking the PT rule) (p 0.83 ±0.6           0.00 ±0.0 ▼         0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Crashes, rear-end (per 1000 veh)                          21.6 ±3.1           40.5 ±4.1 ▲         11.9 ±1.8 ▼         43.8 ±2.9 ▲         
+Crashes where a car keeping its lane was hit from the sid 31.6 ±3.4           9.84 ±1.3 ▼         10.6 ±1.8 ▼         10.0 ±2.3 ▼         
+Near misses (< 0.6 m) (per 100 veh)                       9.73 ±0.9           6.62 ±0.7 ▼         5.76 ±0.8 ▼         2.96 ±0.3 ▼         
+Hard braking (> 4 m/s²) (per 100 veh)                     222 ±18             314 ±14 ▲           150 ±12 ▼           310 ±28 ▲           
+Lane changes inside the ring (per 100 veh)                28.4 ±2.0           62.7 ±1.7 ▲         0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Exits straight from the inner lane (per 100 veh)          16.9 ±1.4           1.19 ±0.2 ▼         28.2 ±1.5 ▲         61.3 ±3.6 ▲         
+Extra laps (missed the exit) (per 100 veh)                3.91 ±0.7           2.31 ±0.2 ▼         1.58 ±0.2 ▼         2.30 ±0.3 ▼         
+Mean delay per vehicle (s)                                55.3 ±10            137 ±17 ▲           36.0 ±3.7 ▼         115 ±21 ▲           
+Throughput (veh/h)                                        1536 ±246           1497 ±28            1776 ±109           1454 ±215           
+Wait before even reaching the approach (s/veh)            9.47 ±6.3           69.2 ±18 ▲          0.83 ±0.9 ▼         51.1 ±18 ▲          
+Mean queue, left entry lane (veh)                         5.88 ±1.2           8.11 ±0.5 ▲         3.21 ±0.8 ▼         8.08 ±0.9 ▲         
+Mean queue, right entry lane (veh)                        0.33 ±0.5           0.02 ±0.0           0.83 ±0.6           0.00 ±0.0           
+Time with a left queue ≥4 and an empty right lane (% of t 51.4 ±4.0           76.1 ±4.6 ▲         20.8 ±3.3 ▼         76.7 ±5.0 ▲         
+Entering via the right lane (%)                           43.9 ±1.2           25.0 ±1.0 ▼         67.0 ±0.9 ▲         25.2 ±1.2 ▼         
+Crash count (raw)                                         60 ±12              57 ±5.4             24 ±3.1 ▼           49 ±7.6             
 
 main=400 side=250 veh/h/arm, trust=0.6 cut=0.25 jump=0.2 compliance=0.75, reps=12 x 30 min
 
-metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      
-Crashes, all (per 1000 vehicles)                          18.6 ±2.9           20.6 ±2.8           5.33 ±2.5 ▼         
-Crashes, entering car vs circulating car (per 1000 veh)   11.9 ±2.5           11.6 ±2.5           3.67 ±2.5 ▼         
-Crashes, lane change inside the ring (per 1000 veh)       3.11 ±1.4           3.72 ±1.9           0.00 ±0.0 ▼         
-Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 0.25 ±0.4           0.25 ±0.4           0.26 ±0.4           
-  of which the "grey area" (both breaking the PT rule) (p 0.00 ±0.0           0.00 ±0.0           0.00 ±0.0           
-Crashes, rear-end (per 1000 veh)                          2.42 ±1.3           4.47 ±1.4 ▲         0.90 ±0.5 ▼         
-Crashes where a car keeping its lane was hit from the sid 11.1 ±2.0           7.87 ±2.5 ▼         3.93 ±2.5 ▼         
-Near misses (< 0.6 m) (per 100 veh)                       4.26 ±0.4           4.82 ±0.5           2.00 ±0.4 ▼         
-Hard braking (> 4 m/s²) (per 100 veh)                     82.3 ±6.8           97.6 ±5.9 ▲         54.2 ±4.5 ▼         
-Lane changes inside the ring (per 100 veh)                39.4 ±1.1           71.8 ±1.1 ▲         0.00 ±0.0 ▼         
-Exits straight from the inner lane (per 100 veh)          21.4 ±0.8           1.02 ±0.2 ▼         31.5 ±0.9 ▲         
-Extra laps (missed the exit) (per 100 veh)                3.14 ±0.3           1.84 ±0.3 ▼         1.83 ±0.3 ▼         
-Mean delay per vehicle (s)                                14.5 ±1.2           18.5 ±1.4 ▲         12.0 ±0.8 ▼         
-Throughput (veh/h)                                        1214 ±34            1203 ±30 ▼          1246 ±39 ▲          
-Wait before even reaching the approach (s/veh)            0.16 ±0.0           0.22 ±0.0 ▲         0.12 ±0.0 ▼         
-Mean queue, left entry lane (veh)                         0.57 ±0.1           0.95 ±0.1 ▲         0.23 ±0.1 ▼         
-Mean queue, right entry lane (veh)                        0.02 ±0.0           0.01 ±0.0 ▼         0.11 ±0.0 ▲         
-Time with a left queue ≥4 and an empty right lane (% of t 3.58 ±1.2           7.94 ±1.9 ▲         0.51 ±0.5 ▼         
-Entering via the right lane (%)                           37.1 ±1.0           24.5 ±0.9 ▼         67.4 ±1.0 ▲         
-Crash count (raw)                                         12 ±2.0             13 ±2.1             3 ±1.6 ▼            
+metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      Turbo               
+Crashes, all (per 1000 vehicles)                          18.6 ±2.9           20.6 ±2.8           5.33 ±2.5 ▼         10.0 ±3.0 ▼         
+Crashes, entering car vs circulating car (per 1000 veh)   11.9 ±2.5           11.6 ±2.5           3.67 ±2.5 ▼         4.89 ±1.4 ▼         
+Crashes, lane change inside the ring (per 1000 veh)       3.11 ±1.4           3.72 ±1.9           0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 0.25 ±0.4           0.25 ±0.4           0.26 ±0.4           0.00 ±0.0           
+  of which the "grey area" (both breaking the PT rule) (p 0.00 ±0.0           0.00 ±0.0           0.00 ±0.0           0.00 ±0.0           
+Crashes, rear-end (per 1000 veh)                          2.42 ±1.3           4.47 ±1.4 ▲         0.90 ±0.5 ▼         4.35 ±1.6           
+Crashes where a car keeping its lane was hit from the sid 11.1 ±2.0           7.87 ±2.5 ▼         3.93 ±2.5 ▼         4.77 ±1.3 ▼         
+Near misses (< 0.6 m) (per 100 veh)                       4.26 ±0.4           4.82 ±0.5           2.00 ±0.4 ▼         1.40 ±0.3 ▼         
+Hard braking (> 4 m/s²) (per 100 veh)                     82.3 ±6.8           97.6 ±5.9 ▲         54.2 ±4.5 ▼         102 ±9.6 ▲          
+Lane changes inside the ring (per 100 veh)                39.4 ±1.1           71.8 ±1.1 ▲         0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Exits straight from the inner lane (per 100 veh)          21.4 ±0.8           1.02 ±0.2 ▼         31.5 ±0.9 ▲         73.0 ±1.3 ▲         
+Extra laps (missed the exit) (per 100 veh)                3.14 ±0.3           1.84 ±0.3 ▼         1.83 ±0.3 ▼         2.38 ±0.4 ▼         
+Mean delay per vehicle (s)                                14.5 ±1.2           18.5 ±1.4 ▲         12.0 ±0.8 ▼         19.5 ±1.6 ▲         
+Throughput (veh/h)                                        1214 ±34            1203 ±30 ▼          1246 ±39 ▲          1231 ±35 ▲          
+Wait before even reaching the approach (s/veh)            0.16 ±0.0           0.22 ±0.0 ▲         0.12 ±0.0 ▼         0.30 ±0.1           
+Mean queue, left entry lane (veh)                         0.57 ±0.1           0.95 ±0.1 ▲         0.23 ±0.1 ▼         0.94 ±0.1 ▲         
+Mean queue, right entry lane (veh)                        0.02 ±0.0           0.01 ±0.0 ▼         0.11 ±0.0 ▲         0.00 ±0.0 ▼         
+Time with a left queue ≥4 and an empty right lane (% of t 3.58 ±1.2           7.94 ±1.9 ▲         0.51 ±0.5 ▼         8.09 ±2.1 ▲         
+Entering via the right lane (%)                           37.1 ±1.0           24.5 ±0.9 ▼         67.4 ±1.0 ▲         24.5 ±1.0 ▼         
+Crash count (raw)                                         12 ±2.0             13 ±2.1             3 ±1.6 ▼            7 ±2.0 ▼            
 
 main=700 side=500 veh/h/arm, trust=0.6 cut=0.25 jump=0.2 compliance=0.75, reps=12 x 30 min
 
-metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      
-Crashes, all (per 1000 vehicles)                          85.6 ±5.5           73.4 ±5.9 ▼         46.1 ±4.3 ▼         
-Crashes, entering car vs circulating car (per 1000 veh)   42.4 ±4.1           18.0 ±3.1 ▼         10.6 ±2.3 ▼         
-Crashes, lane change inside the ring (per 1000 veh)       4.63 ±0.7           4.48 ±1.0           0.00 ±0.0 ▼         
-Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 1.05 ±0.6           0.17 ±0.2 ▼         1.29 ±0.7           
-  of which the "grey area" (both breaking the PT rule) (p 0.97 ±0.6           0.00 ±0.0 ▼         0.00 ±0.0 ▼         
-Crashes, rear-end (per 1000 veh)                          35.7 ±3.5           49.7 ±3.0 ▲         32.0 ±4.3           
-Crashes where a car keeping its lane was hit from the sid 38.0 ±4.5           11.3 ±2.3 ▼         11.7 ±2.4 ▼         
-Near misses (< 0.6 m) (per 100 veh)                       11.2 ±0.7           7.20 ±0.6 ▼         8.17 ±1.1 ▼         
-Hard braking (> 4 m/s²) (per 100 veh)                     297 ±15             370 ±13 ▲           242 ±16 ▼           
-Lane changes inside the ring (per 100 veh)                25.5 ±1.1           60.4 ±1.5 ▲         0.00 ±0.0 ▼         
-Exits straight from the inner lane (per 100 veh)          16.1 ±0.6           1.40 ±0.3 ▼         22.4 ±2.7 ▲         
-Extra laps (missed the exit) (per 100 veh)                4.07 ±0.4           2.62 ±0.4 ▼         0.91 ±0.2 ▼         
-Mean delay per vehicle (s)                                124 ±9.8            252 ±16 ▲           95.9 ±17 ▼          
-Throughput (veh/h)                                        1715 ±30            1484 ±29 ▼          1713 ±327           
-Wait before even reaching the approach (s/veh)            61.0 ±8.5           171 ±15 ▲           34.5 ±14 ▼          
-Mean queue, left entry lane (veh)                         8.87 ±0.8           10.6 ±0.3 ▲         8.35 ±1.1           
-Mean queue, right entry lane (veh)                        0.18 ±0.0           0.02 ±0.0 ▼         2.86 ±1.7 ▲         
-Time with a left queue ≥4 and an empty right lane (% of t 73.1 ±5.1           91.1 ±2.7 ▲         31.8 ±6.8 ▼         
-Entering via the right lane (%)                           46.3 ±1.0           25.2 ±1.1 ▼         67.8 ±0.9 ▲         
-Crash count (raw)                                         95 ±7.6             70 ±6.1 ▼           49 ±9.9 ▼           
+metric                                                    PT 2014 (real)      PT 2014 (ideal)     Lane integrity      Turbo               
+Crashes, all (per 1000 vehicles)                          85.6 ±5.5           73.4 ±5.9 ▼         46.1 ±4.3 ▼         65.6 ±5.4 ▼         
+Crashes, entering car vs circulating car (per 1000 veh)   42.4 ±4.1           18.0 ±3.1 ▼         10.6 ±2.3 ▼         13.7 ±2.0 ▼         
+Crashes, lane change inside the ring (per 1000 veh)       4.63 ±0.7           4.48 ±1.0           0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Crashes, inner-lane exiter vs outer-lane car (per 1000 ve 1.05 ±0.6           0.17 ±0.2 ▼         1.29 ±0.7           0.00 ±0.0 ▼         
+  of which the "grey area" (both breaking the PT rule) (p 0.97 ±0.6           0.00 ±0.0 ▼         0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Crashes, rear-end (per 1000 veh)                          35.7 ±3.5           49.7 ±3.0 ▲         32.0 ±4.3           50.7 ±4.8 ▲         
+Crashes where a car keeping its lane was hit from the sid 38.0 ±4.5           11.3 ±2.3 ▼         11.7 ±2.4 ▼         13.2 ±1.8 ▼         
+Near misses (< 0.6 m) (per 100 veh)                       11.2 ±0.7           7.20 ±0.6 ▼         8.17 ±1.1 ▼         2.97 ±0.3 ▼         
+Hard braking (> 4 m/s²) (per 100 veh)                     297 ±15             370 ±13 ▲           242 ±16 ▼           369 ±16 ▲           
+Lane changes inside the ring (per 100 veh)                25.5 ±1.1           60.4 ±1.5 ▲         0.00 ±0.0 ▼         0.00 ±0.0 ▼         
+Exits straight from the inner lane (per 100 veh)          16.1 ±0.6           1.40 ±0.3 ▼         22.4 ±2.7 ▲         61.1 ±2.0 ▲         
+Extra laps (missed the exit) (per 100 veh)                4.07 ±0.4           2.62 ±0.4 ▼         0.91 ±0.2 ▼         1.85 ±0.2 ▼         
+Mean delay per vehicle (s)                                124 ±9.8            252 ±16 ▲           95.9 ±17 ▼          252 ±52 ▲           
+Throughput (veh/h)                                        1715 ±30            1484 ±29 ▼          1713 ±327           1534 ±74 ▼          
+Wait before even reaching the approach (s/veh)            61.0 ±8.5           171 ±15 ▲           34.5 ±14 ▼          174 ±49 ▲           
+Mean queue, left entry lane (veh)                         8.87 ±0.8           10.6 ±0.3 ▲         8.35 ±1.1           10.3 ±0.5 ▲         
+Mean queue, right entry lane (veh)                        0.18 ±0.0           0.02 ±0.0 ▼         2.86 ±1.7 ▲         0.00 ±0.0 ▼         
+Time with a left queue ≥4 and an empty right lane (% of t 73.1 ±5.1           91.1 ±2.7 ▲         31.8 ±6.8 ▼         90.7 ±3.1 ▲         
+Entering via the right lane (%)                           46.3 ±1.0           25.2 ±1.1 ▼         67.8 ±0.9 ▲         25.3 ±1.0 ▼         
+Crash count (raw)                                         95 ±7.6             70 ±6.1 ▼           49 ±9.9 ▼           64 ±6.5 ▼           
