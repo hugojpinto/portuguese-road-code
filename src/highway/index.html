@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highway Lane Rules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Keep right vs speed lanes</h1>
+      <span class="claim">Does "always keep right" (with forced returns to the right lane and flashing at middle-lane drivers) cause more lane changes, stress and crashes than lanes with increasing speed from right to left?</span>
+      <nav><a href="../index.html" id="home-link">all simulators</a><button id="theme" title="Toggle theme">◐</button></nav>
+    </header>
+    <div class="layout">
+      <aside class="panel" id="controls"></aside>
+      <main class="center">
+        <div class="toolbar">
+          <button id="play">Pause</button>
+          <button id="reset">Reset</button>
+          <span class="speed">Speed <select id="speed"><option>1</option><option>2</option><option selected>5</option><option>10</option><option>25</option><option>50</option></select>×</span>
+          <span class="speed">Colour <select id="color"><option value="speed">by speed</option><option value="stress">by stress</option></select></span>
+          <span class="clock" id="clock"></span>
+        </div>
+        <canvas class="sim" id="main"></canvas>
+        <div class="legend">
+          <span style="--c: hsl(150 70% 55%)">fast</span><span style="--c: hsl(60 70% 55%)">~70 km/h</span><span style="--c: hsl(0 70% 55%)">stopped</span>
+          <span style="--c: #fff6a0">tailgating and flashing</span><span style="--c: rgba(255,120,60,.8)">stressed driver</span><span style="--c: #ffb020">indicating / changing lane</span><span style="--c: var(--bad)">crash (last 60 s)</span>
+        </div>
+        <canvas class="sim" id="zoom"></canvas>
+        <section class="experiment" id="experiment"></section>
+        <section class="experiment caveats">
+          <h2>How the model works, and its limits</h2>
+          <ul>
+            <li><b>Car following</b>: Intelligent Driver Model (IDM) with a 0.3–0.6 s reaction delay and anticipation. A fully attentive IDM driver never crashes, so <b>every crash comes from a modelled human error</b>: short and long distractions, a missed car when checking a gap (worst in the blind spot), and stress.</li>
+            <li><b>Lane changes</b>: MOBIL model (incentive plus a safety check). Each rule set only changes the lane-choice incentives, whether passing on the right is allowed, and when tailgating and flashing are "licensed". Drivers, traffic and human-error rates are identical across rules: each replicate uses the same random traffic for every rule (common random numbers).</li>
+            <li><b>Absolute crash rates are deliberately inflated</b>, by orders of magnitude, so crashes are frequent enough to compare. Only the <i>ratios</i> between rule sets mean anything. The error rates are calibrated so that, under the EU rule at medium-heavy traffic, rear-end crashes are roughly 40–50% of multi-vehicle crashes. That is close to real motorway data. If you push the error sliders, you can make either crash type dominate.</li>
+            <li><b>Not modelled</b>: single-vehicle crashes (run-off-road, about 30% of real motorway crashes), weather, night-time, motorbikes, secondary crashes (crashed cars are removed instantly), and the slow cultural adaptation of drivers to a new rule.</li>
+            <li><b>Real-world reference</b>: lane-change and sideswipe crashes are typically 10–25% of motorway crashes, and rear-end the largest category. The simulator is better at answering "which rule exposes drivers to more risky manoeuvres and stress" than "what share of crashes are lane changes".</li>
+          </ul>
+        </section>
+      </main>
+      <aside class="right panel">
+        <div class="section"><h2>Live counters</h2><div class="kv" id="live"></div></div>
+        <div class="section"><h2>Crash log</h2><div class="log" id="log"><span class="muted">no crashes yet</span></div></div>
+      </aside>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

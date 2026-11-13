@@ -1,0 +1,26 @@
+{
+  "name": "roadrules",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:highway && npm run build:roundabout",
+    "build:highway": "SIM=highway vite build",
+    "build:roundabout": "SIM=roundabout vite build",
+    "batch:highway": "tsx src/highway/cli.ts",
+    "batch:roundabout": "tsx src/roundabout/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.6",
+    "vite-plugin-singlefile": "^2.3.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  }
+}

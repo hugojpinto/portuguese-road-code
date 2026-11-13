@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two-Lane Roundabout Rules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Roundabouts: PT 2014 lane rule vs lane integrity</h1>
+      <span class="claim">On a two-lane roundabout, does "pick the lane by your exit, and the outer lane must exit" make things safer, or does it create in-ring lane changes, one-sided queues and grey-area side impacts?</span>
+      <nav><a href="../index.html" id="home-link">all simulators</a><button id="theme" title="Toggle theme">◐</button></nav>
+    </header>
+    <div class="layout">
+      <aside class="panel" id="controls"></aside>
+      <main class="center">
+        <div class="toolbar">
+          <button id="play">Pause</button>
+          <button id="reset">Reset</button>
+          <span class="speed">Speed <select id="speed"><option>1</option><option selected>2</option><option>5</option><option>10</option><option>25</option></select>×</span>
+          <span class="clock" id="clock"></span>
+        </div>
+        <canvas class="sim" id="main" style="max-width: 760px; margin: 0 auto"></canvas>
+        <div class="legend">
+          <span style="--c: #3ccf8e">going to 1st exit</span><span style="--c: #4f8cff">2nd exit</span><span style="--c: #f2a93b">3rd exit</span><span style="--c: #e86bd0">U-turn</span>
+          <span style="--c: #ffb020">indicating</span><span style="--c: #ff5c8a">outer lane but not exiting next (breaks the PT rule)</span><span style="--c: var(--bad)">crash</span>
+        </div>
+        <section class="experiment" id="experiment"></section>
+        <section class="experiment caveats">
+          <h2>How the model works, and its limits</h2>
+          <ul>
+            <li><b>Geometry</b>: a four-arm roundabout about 64 m across, with two circulating lanes (centre-lines at 26 m and 30 m radius), two-lane entries and two-lane exits. Traffic circulates counter-clockwise.</li>
+            <li><b>Who is in which lane is decided by geometry.</b> A car cutting across the outer lane is "in" the outer lane exactly while its body is there, so outer-lane drivers see it and brake (after their reaction time). Collisions are detected from the actual car footprints. No conflict type is scripted.</li>
+            <li><b>Giving way</b>: entering cars and cars leaving from the inner lane use a conflict-zone gap test, re-checked continuously until they can no longer stop. Drivers can miss a car (more often in the blind spot) and can misread signals. Under PT 2014 they may also assume an outer-lane car <i>will</i> exit because the rule says it must.</li>
+            <li><b>Same drivers, same human-error rates, same random traffic for every rule.</b> Only lane choice, in-ring behaviour, and what drivers expect of others change.</li>
+            <li><b>Absolute crash rates are inflated</b> so crashes are frequent enough to compare. Only the ratios between rules mean anything.</li>
+            <li><b>Error-free check</b>: with every human error switched off, lane integrity is almost crash-free. PT 2014 still produces some crashes. Most happen where a car moving out to the outer lane (as the rule requires) meets entrants from the arm it has just passed. This is a structural feature of the rule on this geometry, not driver error.</li>
+            <li><b>Not modelled</b>: pedestrians, cyclists, spiral or turbo lane markings (physical lane guidance), and heavy vehicles straddling lanes. Crashed cars are removed instantly, which slightly relieves congestion.</li>
+          </ul>
+        </section>
+      </main>
+      <aside class="right panel">
+        <div class="section"><h2>Live counters</h2><div class="kv" id="live"></div></div>
+        <div class="section"><h2>Crash log</h2><div class="log" id="log"><span class="muted">no crashes yet</span></div></div>
+      </aside>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
