@@ -166,3 +166,7 @@ results/         outputs of run-experiments.sh
 ```
 
 Plain TypeScript and Canvas, built with Vite. No runtime dependencies.
+
+## Licence
+
+© 2026 Hugo José Pinto. This work (code, results, documentation and media) is licensed under [Creative Commons Attribution-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nd/4.0/) (CC BY-ND 4.0). You may share and redistribute it, including commercially, as long as you give appropriate credit and don't distribute modified versions. See [LICENSE](LICENSE) for the full text.
